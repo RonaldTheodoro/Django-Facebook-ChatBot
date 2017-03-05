@@ -1,6 +1,8 @@
-# Basic Project
+# Django Facebook ChatBot
 
-This is just a basic sample for django projects
+A simple chatbot example
+
+https://medium.com/@hudsonbrendon/desenvolvendo-chatbots-para-o-facebook-messenger-com-python-e-django-1-3-eb9e6a5eaff2#.nhie9yhcr
 
 ## How to develop?
 
