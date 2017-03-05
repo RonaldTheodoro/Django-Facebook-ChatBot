@@ -1,16 +1,17 @@
 from django.test import TestCase
-from django.shortcuts import resolve_url
+from django.test import Client
+from django.core.urlresolvers import reverse
 
 
-class HomeTest(TestCase):
+class TestSpotifyBotView(TestCase):
 
     def setUp(self):
-        self.response = self.client.get(resolve_url('core:index'))
+        self.url = reverse('core:spotify')
+        self.client = Client()
 
     def test_get(self):
         """GET / must return status code 200"""
-        self.assertEqual(200, self.response.status_code)
-
-    def test_template(self):
-        """Must use index.html"""
-        self.assertTemplateUsed(self.response, 'core/index.html')
+        response = self.client.get(self.url)
+        self.assertEqual(200, response.status_code)
+        self.assertEqual(response.content, "It's Rock!")
+        
