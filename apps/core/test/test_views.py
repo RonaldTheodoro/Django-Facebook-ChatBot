@@ -9,8 +9,8 @@ class TestSpotifyBotView(TestCase):
         self.url = reverse('core:spotify')
         self.client = Client()
 
-    def test_get(self):
-        """GET / must return status code 200"""
+    def test_get_token_is_invalid(self):
         response = self.client.get(self.url)
         self.assertEqual(200, response.status_code)
-        self.assertEqual(response.content, b'Hello World')
+        self.assertEqual(response.content, b'Error, invalid token')
+        
