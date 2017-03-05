@@ -13,5 +13,4 @@ class TestSpotifyBotView(TestCase):
         """GET / must return status code 200"""
         response = self.client.get(self.url)
         self.assertEqual(200, response.status_code)
-        self.assertEqual(response.content, "It's Rock!")
-        
+        self.assertEqual(response.content, b'Hello World')
