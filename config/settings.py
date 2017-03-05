@@ -122,3 +122,7 @@ USE_TZ = True
 
 STATIC_URL = config('STATIC_URL', default='/static/')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+# Facebook API Token
+TOKEN_VERIFY = config('TOKEN_VERIFY')
